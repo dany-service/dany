@@ -1,0 +1,195 @@
+{
+  "header": {
+    "services": "Services",
+    "about": "À propos",
+    "reviews": "Avis",
+    "contact": "Contact",
+    "emergency": "Appel d'urgence",
+    "order": "Commander"
+  },
+  "hero": {
+    "title": "Des services professionnels pour votre maison",
+    "subtitle": "Nettoyage, sécurité, jardinage et bien plus encore — avec une équipe fiable et expérimentée.",
+    "cta_quote": "Demandez un devis",
+    "cta_call": "Appelez-nous maintenant",
+    "cta_Insured": "Assuré",
+    "cta_available": "Service d'urgence 7/7",
+    "cta_experience": "ans d'expérience"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nous offrons des services fiables et professionnels pour votre maison.",
+    "coming_soon": "Bientôt disponible",
+    "learn_more": "En savoir plus",
+    "cleaning": {
+      "title": "Nettoyage",
+      "description": "Un nettoyage complet pour votre maison, vos bureaux et vos espaces commerciaux.",
+      "features": [
+        "Produits respectueux de l’environnement",
+        "Personnel formé et professionnel",
+        "Horaires flexibles"
+      ]
+    },
+    "security": {
+      "title": "Sécurité",
+      "description": "Protégez votre propriété avec nos solutions de sécurité modernes.",
+      "features": [
+        "Agents de sécurité agréés",
+        "Surveillance 24/7",
+        "Réponse rapide"
+      ]
+    },
+    "gardening": {
+      "title": "Jardinage",
+      "description": "Entretenez votre espace vert avec notre service de jardinage complet.",
+      "features": [
+        "Entretien des pelouses",
+        "Élagage et plantation",
+        "Gestion des déchets verts"
+      ]
+    }
+  },
+  "why": {
+    "title": "Pourquoi Nous Choisir",
+    "subtitle": "Nous nous engageons à fournir un service fiable et de qualité supérieure.",
+    "licensed": {
+      "title": "Personnel agréé",
+      "desc": "Tous nos techniciens sont certifiés et assurés."
+    },
+    "emergency": {
+      "title": "Intervention d'urgence",
+      "desc": "Disponible 24h/24 et 7j/7 pour toute urgence."
+    },
+    "quality": {
+      "title": "Qualité garantie",
+      "desc": "Nous offrons une garantie de satisfaction sur tous nos services."
+    },
+    "team": {
+      "title": "Équipe expérimentée",
+      "desc": "Plus de 10 ans d'expérience dans les services à domicile."
+    },
+    "equipment": {
+      "title": "Matériel moderne",
+      "desc": "Nous utilisons des outils et équipements de dernière génération."
+    },
+    "free_estimate": {
+      "title": "Devis gratuit",
+      "desc": "Obtenez un devis gratuit et personnalisé rapidement."
+    },
+    "cta_experience": "ans d'expérience",
+    "urgence": "Service d'urgence ",
+    "taux": "Taux de satisfaction",
+    "satisfaction": "Clients satisfaits"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "La satisfaction de nos clients est notre priorité.",
+    "list": [
+      {
+        "name": "Sophie L.",
+        "location": "Casablanca",
+        "service": "Nettoyage",
+        "rating": 5,
+        "text": "Excellent service ! Ma maison n’a jamais été aussi propre."
+      },
+      {
+        "name": "Karim A.",
+        "location": "Rabat",
+        "service": "Sécurité",
+        "rating": 4,
+        "text": "Équipe très professionnelle et toujours ponctuelle."
+      },
+      {
+        "name": "Nadia B.",
+        "location": "Marrakech",
+        "service": "Jardinage",
+        "rating": 5,
+        "text": "Ils ont transformé mon jardin, je recommande !"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider — contactez-nous à tout moment.",
+    "info": {
+      "heading": "Informations de contact",
+      "hotline_label": "Hotline d'urgence",
+      "hotline_number": "(212) 123-4567",
+      "hotline_available": "Disponible 24/7",
+      "email_label": "Envoyez-nous un email",
+      "email_address": "info@dany.com",
+      "email_response": "Réponse sous 2 heures",
+      "service_area_label": "Zone de service",
+      "service_area_text": "Grande région métropolitaine",
+      "service_area_range": "Rayon de plus de 50 miles",
+      "hours_label": "Horaires d'ouverture",
+      "hours_week": "Lun-Ven : 7h - 20h",
+      "hours_weekend": "Sam-Dim : 8h - 18h",
+      "hours_emergency": "Service d'urgence disponible 24/7"
+    },
+    "form": {
+      "heading": "Envoyer un message",
+      "fname": "Premon",
+      "lname": "Nom",
+      "email": "Email",
+      "phone": "Numéro de téléphone",
+      "service": "Choisissez un service",
+      "service_options": {
+        "deep": "Nettoyage Deep",
+        "normal": "Nettoyage Normal",
+        "other": "Autre"
+      },
+      "message": "Écrivez votre message ici...",
+      "submit": "Envoyer"
+    },
+    "privacy_notice": "🔒 Vos informations sont sécurisées et ne seront jamais partagées avec des tiers."
+  },
+  "footer": {
+    "description": "Des services de confiance pour votre maison et votre entreprise.",
+    "services": {
+      "title": "Nos services",
+      "list": [
+        "Nettoyage",
+        "Sécurité",
+        "Jardinage"
+      ]
+    },
+    "quick_links": {
+      "title": "Liens rapides",
+      "list": [
+        "Accueil",
+        "Services",
+        "À propos",
+        "Contact"
+      ]
+    },
+    "contact": {
+      "title": "Contactez-nous"
+    }
+  },
+  "order": {
+    "title": "Passer une commande",
+    "subtitle": "Veuillez remplir le formulaire ci-dessous pour envoyer votre commande.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail (facultatif)",
+      "phone": "Numéro de téléphone",
+      "location": "Localisation",
+      "comment": "Commentaires (facultatif)",
+      "service": "Sélectionnez un service",
+      "service_options": {
+        "deep": "Nettoyage Deep",
+        "normal": "Nettoyage Normal",
+        "other": "Autre"
+      },
+      "message": "Votre message ou demande",
+      "name_required": "Veuillez entrer votre nom",
+      "phone_required": "Veuillez entrer votre numéro de téléphone",
+      "date_required": "Veuillez choisir une date",
+      "service_required": "Veuillez choisir un service",
+      "location_required": "Veuillez entrer votre emplacement",
+      "submit": "Envoyer la commande",
+      "submit_success": "Commande envoyée avec succès !"
+    }
+  }
+}

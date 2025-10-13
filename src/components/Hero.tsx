@@ -1,62 +1,52 @@
 import React from 'react';
 import { Phone, Clock, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const Hero = () => {
+const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-gradient-to-br from-blue-50 to-blue-100 pt-20 pb-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Professional Home Services You Can 
-                <span className="text-blue-700">Trust</span>
+                {t('hero.title')}
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                From emergency Cleaning servcies, our Experinced professionals 
-                deliver quality service with 7/7 availability and satisfaction guarantee.
-              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">{t('hero.subtitle')}</p>
             </div>
 
-            {/* Trust Indicators */}
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center space-x-2 text-green-600">
                 <Shield size={20} />
-                <span className="font-medium">Insured</span>
+                <span className="font-medium"> {t('hero.cta_Insured')}</span>
               </div>
               <div className="flex items-center space-x-2 text-blue-600">
                 <Clock size={20} />
-                <span className="font-medium">7/7 Emergency Service</span>
+                <span className="font-medium"> {t('hero.cta_available')}</span>
               </div>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
-                Get Free Quote
+                {t('hero.cta_quote')}
               </button>
               <button className="flex items-center justify-center space-x-2 border-2 border-blue-700 text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition-colors">
                 <Phone size={20} />
-                <span>Call Now: (212) 123-4567</span>
+                <span>{t('hero.cta_call')}</span>
               </button>
             </div>
           </div>
 
-          {/* Hero Image */}
           <div className="relative">
-            <img 
-              src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg"
-              alt="Professional technician working"
-              className="rounded-2xl shadow-2xl"
-            />
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-700">1+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
-              </div>
+            <img src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg" alt="Professional technician working" className="rounded-2xl shadow-2xl" />
+
+            <div className="absolute -bottom-6 -left-6 rtl:-right-6 bg-white p-4 rounded-xl shadow-lg border text-center w-max max-w-xs">
+              <div className="text-2xl font-bold text-blue-700">1+</div>
+              <div className="text-sm text-gray-600"> {t('hero.cta_experience')}</div>
             </div>
+
           </div>
         </div>
       </div>

@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './views/Home';
+import Order from './views/order';
 
-function App() {
+export default function MainRouter() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <Services />
-      <WhyChooseUs />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/order" element={<Order />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
