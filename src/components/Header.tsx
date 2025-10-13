@@ -45,6 +45,9 @@ const Header: React.FC = () => {
               <a href="#about" className="text-gray-600 hover:text-blue-700 transition-colors">{t('header.about')}</a>
               <a href="#testimonials" className="text-gray-600 hover:text-blue-700 transition-colors">{t('header.reviews')}</a>
               <a href="#contact" className="text-gray-600 hover:text-blue-700 transition-colors">{t('header.contact')}</a>
+              <a href="/order" className="text-gray-600 hover:text-blue-700 transition-colors">
+                {t('header.order')}
+              </a>
               <div className="flex items-center space-x-2 text-blue-600 pt-4 border-t">
                 <Phone size={18} />
                 <span className="font-semibold">(212) 123-4567</span>
