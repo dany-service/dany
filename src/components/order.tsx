@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
 
 interface OrderFormData {
   name: string;
@@ -30,7 +32,7 @@ const OrderComponent: React.FC = () => {
 
   useEffect(() => {
     const now = new Date();
-    const cutoff = 14; // 2 PM
+    const cutoff = 14;
     const min = new Date();
     if (now.getHours() >= cutoff) {
       min.setDate(min.getDate() + 2);
@@ -45,10 +47,9 @@ const OrderComponent: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setOrderData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: '' })); // clear error when typing
+    setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
-  // Helper to encode form data for Netlify
   const encode = (data: Record<string, string>) =>
     Object.keys(data)
       .map(
@@ -70,7 +71,6 @@ const OrderComponent: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     const form = e.currentTarget;
@@ -86,7 +86,22 @@ const OrderComponent: React.FC = () => {
         body: encode(data)
       });
 
-      alert(t('order.form.submit_success'));
+      // ✅ Cool success popup
+      Swal.fire({
+        title: t('order.form.submit_success'),
+        icon: 'success',
+        background: '#111827',
+        color: '#fff',
+        confirmButtonColor: '#3b82f6',
+        iconColor: '#3b82f6',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      });
+
       setOrderData({
         name: '',
         phone: '',
@@ -97,7 +112,16 @@ const OrderComponent: React.FC = () => {
         comment: ''
       });
     } catch (error) {
-      alert(t('order.form.submit_error'));
+      // ❌ Failure popup
+      Swal.fire({
+        title: t('order.form.submit_error'),
+        text: t('order.form.error_message'),
+        icon: 'error',
+        background: '#111827',
+        color: '#fff',
+        confirmButtonColor: '#ef4444',
+        iconColor: '#ef4444'
+      });
     }
   };
 
@@ -135,7 +159,6 @@ const OrderComponent: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-2xl border border-white/10 space-y-6"
         >
-          {/* Hidden Netlify inputs */}
           <input type="hidden" name="form-name" value="order" />
           <p className="hidden">
             <label>
@@ -228,7 +251,6 @@ const OrderComponent: React.FC = () => {
             className="w-full px-4 py-3 rounded-lg bg-gray-800/70 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none transition-all resize-none"
           />
 
-          {/* Submit */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
